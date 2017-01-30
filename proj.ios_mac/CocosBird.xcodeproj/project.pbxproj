@@ -64,6 +64,12 @@
 		E1F256B91E3FB29400BCCC00 /* iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = E1F256B31E3FB29400BCCC00 /* iphonehd */; };
 		E1F256BA1E3FB29400BCCC00 /* iphonehd5 in Resources */ = {isa = PBXBuildFile; fileRef = E1F256B41E3FB29400BCCC00 /* iphonehd5 */; };
 		E1F256BB1E3FB29400BCCC00 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = E1F256B51E3FB29400BCCC00 /* Sounds */; };
+		E1F256C21E3FB5E100BCCC00 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F256BC1E3FB5E100BCCC00 /* GameOverScene.cpp */; };
+		E1F256C31E3FB5E100BCCC00 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F256BC1E3FB5E100BCCC00 /* GameOverScene.cpp */; };
+		E1F256C41E3FB5E100BCCC00 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F256BE1E3FB5E100BCCC00 /* GameScene.cpp */; };
+		E1F256C51E3FB5E100BCCC00 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F256BE1E3FB5E100BCCC00 /* GameScene.cpp */; };
+		E1F256C61E3FB5E100BCCC00 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F256C01E3FB5E100BCCC00 /* MainMenu.cpp */; };
+		E1F256C71E3FB5E100BCCC00 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F256C01E3FB5E100BCCC00 /* MainMenu.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -167,6 +173,13 @@
 		E1F256B31E3FB29400BCCC00 /* iphonehd */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iphonehd; sourceTree = "<group>"; };
 		E1F256B41E3FB29400BCCC00 /* iphonehd5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iphonehd5; sourceTree = "<group>"; };
 		E1F256B51E3FB29400BCCC00 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		E1F256BC1E3FB5E100BCCC00 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
+		E1F256BD1E3FB5E100BCCC00 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		E1F256BE1E3FB5E100BCCC00 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		E1F256BF1E3FB5E100BCCC00 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		E1F256C01E3FB5E100BCCC00 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
+		E1F256C11E3FB5E100BCCC00 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		E1F256C81E3FB78400BCCC00 /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -307,6 +320,13 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E1F256BC1E3FB5E100BCCC00 /* GameOverScene.cpp */,
+				E1F256BD1E3FB5E100BCCC00 /* GameOverScene.h */,
+				E1F256BE1E3FB5E100BCCC00 /* GameScene.cpp */,
+				E1F256C81E3FB78400BCCC00 /* Definitions.h */,
+				E1F256BF1E3FB5E100BCCC00 /* GameScene.h */,
+				E1F256C01E3FB5E100BCCC00 /* MainMenu.cpp */,
+				E1F256C11E3FB5E100BCCC00 /* MainMenu.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* SplashScene.cpp */,
@@ -511,7 +531,10 @@
 				46880B8A19C43A87006E1F66 /* SplashScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				E1F256C41E3FB5E100BCCC00 /* GameScene.cpp in Sources */,
+				E1F256C21E3FB5E100BCCC00 /* GameOverScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				E1F256C61E3FB5E100BCCC00 /* MainMenu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,8 +542,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F256C51E3FB5E100BCCC00 /* GameScene.cpp in Sources */,
+				E1F256C71E3FB5E100BCCC00 /* MainMenu.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				E1F256C31E3FB5E100BCCC00 /* GameOverScene.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* SplashScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

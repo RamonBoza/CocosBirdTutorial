@@ -1,9 +1,9 @@
-#ifndef __SPLASH_SCENE_H__
-#define __SPLASH_SCENE_H__
+#ifndef __GAME_SCENE_H__
+#define __GAME_SCENE_H__
 
 #include "cocos2d.h"
 
-class SplashScene : public cocos2d::Layer
+class GameScene : public cocos2d::Layer
 {
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -14,10 +14,7 @@ public:
     
     
     // implement the "static create()" method manually
-    CREATE_FUNC(SplashScene);
-    
-private:
-    void GoToMainMenuScene(float dt);
+    CREATE_FUNC(GameScene);
 };
 
-#endif // __SPLASH_SCENE_H__
+#endif // __GAME_SCENE_H__
