@@ -37,6 +37,12 @@ bool MainMenuScene::init()
     
     this->addChild(backgroundSprite);
     
+    auto titleSprite = Sprite::create("Title.png");
+    titleSprite->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height - titleSprite->getContentSize().height));
+    
+    this->addChild(titleSprite);
+    
+    
     auto playButton = MenuItemImage::create("Play Button.png","Play Button Clicked.png", CC_CALLBACK_1(MainMenuScene::GoToGameScene, this));
     playButton->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
     
