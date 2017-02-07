@@ -48,6 +48,8 @@ bool GameScene::init()
 
     this->schedule(schedule_selector(GameScene::SpawnPipe), PIPE_SPAWN_FREQUENCY * visibleSize.width);
     
+    bird = new Bird(this);
+    
     return true;
 }
 
