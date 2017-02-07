@@ -2,6 +2,7 @@
 #define __GAME_SCENE_H__
 
 #include "cocos2d.h"
+#include "Pipe.h"
 
 class GameScene : public cocos2d::Layer
 {
@@ -19,7 +20,11 @@ public:
 private:
     void SetPhysicsWorld( cocos2d::PhysicsWorld * world) { sceneWorld = world; }
     
+    void SpawnPipe( float dt);
+    
     cocos2d::PhysicsWorld *sceneWorld;
+    
+    Pipe pipe;
     
 };
 
