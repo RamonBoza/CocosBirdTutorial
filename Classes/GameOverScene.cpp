@@ -1,4 +1,7 @@
 #include "GameOverScene.h"
+#include "GameScene.h"
+#include "MainMenu.h"
+#include "Definitions.h"
 
 USING_NS_CC;
 
@@ -30,6 +33,28 @@ bool GameOverScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
+    auto retryItem = MenuItemImage::create("Retry Button.png","Retry Button Clicked.png",CC_CALLBACK_1(GameOverScene::GoToGameScene,this));
+    retryItem->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 4 * 3));
+
+    auto menuItem = MenuItemImage::create("Menu Button.png","Menu Button Clicked.png",CC_CALLBACK_1(GameOverScene::GoToMainMenuScene,this));
+    menuItem->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 4 ));
+
+    auto menu = Menu::create(retryItem, menuItem, NULL);
+    menu->setPosition(Point::ZERO);
+    
+    this->addChild(menu);
     
     return true;
+}
+
+void GameOverScene::GoToMainMenuScene(cocos2d::Ref *sender)
+{
+    auto scene = MainMenuScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME,scene));
+}
+
+void GameOverScene::GoToGameScene(cocos2d::Ref *sender)
+{
+    auto scene = GameScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME,scene));
 }
