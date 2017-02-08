@@ -36,6 +36,8 @@ private:
     
     Bird * bird;
     
+    unsigned int score;
+    
 };
 
 #endif // __GAME_SCENE_H__
