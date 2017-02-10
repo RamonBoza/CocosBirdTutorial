@@ -58,6 +58,8 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E1C6EBF11E4DECC7009F3290 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E1C6EBF01E4DECC7009F3290 /* fonts */; };
+		E1C6EBF21E4DECC7009F3290 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E1C6EBF01E4DECC7009F3290 /* fonts */; };
 		E1F256B61E3FB29400BCCC00 /* ipad in Resources */ = {isa = PBXBuildFile; fileRef = E1F256B01E3FB29400BCCC00 /* ipad */; };
 		E1F256B71E3FB29400BCCC00 /* ipadhd in Resources */ = {isa = PBXBuildFile; fileRef = E1F256B11E3FB29400BCCC00 /* ipadhd */; };
 		E1F256B81E3FB29400BCCC00 /* iphone in Resources */ = {isa = PBXBuildFile; fileRef = E1F256B21E3FB29400BCCC00 /* iphone */; };
@@ -171,6 +173,7 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E1C6EBF01E4DECC7009F3290 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		E1F256B01E3FB29400BCCC00 /* ipad */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ipad; sourceTree = "<group>"; };
 		E1F256B11E3FB29400BCCC00 /* ipadhd */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ipadhd; sourceTree = "<group>"; };
 		E1F256B21E3FB29400BCCC00 /* iphone */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iphone; sourceTree = "<group>"; };
@@ -314,6 +317,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1C6EBF01E4DECC7009F3290 /* fonts */,
 				E1F256B01E3FB29400BCCC00 /* ipad */,
 				E1F256B11E3FB29400BCCC00 /* ipadhd */,
 				E1F256B21E3FB29400BCCC00 /* iphone */,
@@ -508,6 +512,7 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				E1F256B81E3FB29400BCCC00 /* iphone in Resources */,
+				E1C6EBF11E4DECC7009F3290 /* fonts in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -529,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				E1C6EBF21E4DECC7009F3290 /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

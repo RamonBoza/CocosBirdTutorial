@@ -19,4 +19,6 @@
 #define BIRD_FLYING_SPEED           0.00375
 #define BIRD_FLY_DURATION           0.25
 
+#define SCORE_FONT_SIZE             0.1
+
 #endif // __DEFINITIONS_H__

@@ -63,10 +63,16 @@ bool GameScene::init()
     touchListener->onTouchBegan = CC_CALLBACK_2(GameScene::onTouchBegan, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener,this);
     
-    this->scheduleUpdate();
-    
     score = 0;
     
+    __String * tempScore = __String::createWithFormat("%i",score);
+    scoreLabel = Label::createWithTTF(tempScore->getCString(), "fonts/Marker Felt.ttf", visibleSize.height* SCORE_FONT_SIZE);
+    scoreLabel->setColor(Color3B::WHITE);
+    scoreLabel->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height * 0.75 + origin.y));
+    
+    this->addChild(scoreLabel,1000);
+    
+    this->scheduleUpdate();
     return true;
 }
 
@@ -92,6 +98,9 @@ bool GameScene::onContactBegin( cocos2d::PhysicsContact & contact)
         
         CCLOG("Point scored");
         score++;
+        
+        __String * tempScore = __String::createWithFormat("%i",score);
+        scoreLabel->setString(tempScore->getCString());
     }
     return true;
 }
