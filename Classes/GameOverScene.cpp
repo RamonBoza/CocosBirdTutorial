@@ -5,8 +5,12 @@
 
 USING_NS_CC;
 
-Scene* GameOverScene::createScene()
+unsigned int score;
+
+Scene* GameOverScene::createScene( unsigned int tempScore)
 {
+    score = tempScore;
+    
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
@@ -16,6 +20,7 @@ Scene* GameOverScene::createScene()
     // add layer as a child to scene
     scene->addChild(layer);
 
+    
     // return the scene
     return scene;
 }
@@ -43,6 +48,28 @@ bool GameOverScene::init()
     menu->setPosition(Point::ZERO);
     
     this->addChild(menu);
+    
+    UserDefault * def = UserDefault::getInstance();
+    auto highScore = def->getIntegerForKey("HIGHSCORE", 0);
+    
+    if (score > highScore) {
+        highScore = score;
+        def->setIntegerForKey("HIGHSCORE", highScore);
+    }
+    
+    def->flush();
+    
+    __String * tempScore = __String::createWithFormat("%i",score);
+    cocos2d::Label * scoreLabel = Label::createWithTTF(tempScore->getCString(), "fonts/Marker Felt.ttf", visibleSize.height* SCORE_FONT_SIZE);
+    scoreLabel->setColor(Color3B::WHITE);
+    scoreLabel->setPosition(Point(visibleSize.width * 0.25 + origin.x, visibleSize.height / 2 + origin.y));
+    this->addChild(scoreLabel);
+    
+    __String * highScoreString = __String::createWithFormat("%i",highScore);
+    cocos2d::Label * highScoreLabel = Label::createWithTTF(highScoreString->getCString(), "fonts/Marker Felt.ttf", visibleSize.height* SCORE_FONT_SIZE);
+    highScoreLabel->setColor(Color3B::YELLOW);
+    highScoreLabel->setPosition(Point(visibleSize.width * 0.75 + origin.x, visibleSize.height / 2 + origin.y));
+    this->addChild(highScoreLabel);
     
     return true;
 }
